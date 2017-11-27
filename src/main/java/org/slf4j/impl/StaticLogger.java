@@ -17,8 +17,7 @@ public class StaticLogger implements Logger {
 
     StaticLogger(String name) {
         this.name = name;
-        this.logger = SLF4JBindingFacade.createSLF4JLoggerInstance();
-        SLF4JBindingFacade.addSLF4JLogger(name,logger);
+        this.logger = SLF4JBindingFacade.createSLF4JLoggerInstance(name);
     }
 
     /**
@@ -211,7 +210,7 @@ public class StaticLogger implements Logger {
      * @param arg    the argument
      */
     public void debug(String format, Object arg) {
-        logger.debug(String.format(format,arg));
+        logger.debug(String.format(format, arg));
     }
 
     /**
@@ -226,7 +225,7 @@ public class StaticLogger implements Logger {
      * @param arg2   the second argument
      */
     public void debug(String format, Object arg1, Object arg2) {
-        logger.debug(String.format(format,arg1,arg2));
+        logger.debug(String.format(format, arg1, arg2));
     }
 
     /**
@@ -244,7 +243,7 @@ public class StaticLogger implements Logger {
      * @param arguments a list of 3 or more arguments
      */
     public void debug(String format, Object... arguments) {
-        logger.debug(String.format(format,arguments));
+        logger.debug(String.format(format, arguments));
     }
 
     /**
@@ -255,7 +254,7 @@ public class StaticLogger implements Logger {
      * @param t   the exception (throwable) to log
      */
     public void debug(String msg, Throwable t) {
-        logger.debug(msg,t);
+        logger.debug(msg, t);
     }
 
     /**
@@ -289,7 +288,7 @@ public class StaticLogger implements Logger {
      * @param arg    the argument
      */
     public void debug(Marker marker, String format, Object arg) {
-        logger.debug(String.format(format,arg));
+        logger.debug(String.format(format, arg));
     }
 
     /**
@@ -303,7 +302,7 @@ public class StaticLogger implements Logger {
      * @param arg2   the second argument
      */
     public void debug(Marker marker, String format, Object arg1, Object arg2) {
-        logger.debug(String.format(format,arg1,arg2));
+        logger.debug(String.format(format, arg1, arg2));
     }
 
     /**
@@ -316,7 +315,7 @@ public class StaticLogger implements Logger {
      * @param arguments a list of 3 or more arguments
      */
     public void debug(Marker marker, String format, Object... arguments) {
-        logger.debug(String.format(format,arguments));
+        logger.debug(String.format(format, arguments));
     }
 
     /**
@@ -328,7 +327,7 @@ public class StaticLogger implements Logger {
      * @param t      the exception (throwable) to log
      */
     public void debug(Marker marker, String msg, Throwable t) {
-        logger.debug(msg,t);
+        logger.debug(msg, t);
     }
 
     /**
@@ -361,7 +360,7 @@ public class StaticLogger implements Logger {
      * @param arg    the argument
      */
     public void info(String format, Object arg) {
-        logger.info(String.format(format,arg));
+        logger.info(String.format(format, arg));
     }
 
     /**
@@ -376,7 +375,7 @@ public class StaticLogger implements Logger {
      * @param arg2   the second argument
      */
     public void info(String format, Object arg1, Object arg2) {
-        logger.info(String.format(format,arg1,arg2));
+        logger.info(String.format(format, arg1, arg2));
     }
 
     /**
@@ -394,7 +393,7 @@ public class StaticLogger implements Logger {
      * @param arguments a list of 3 or more arguments
      */
     public void info(String format, Object... arguments) {
-        logger.info(String.format(format,arguments));
+        logger.info(String.format(format, arguments));
     }
 
     /**
@@ -438,7 +437,7 @@ public class StaticLogger implements Logger {
      * @param arg    the argument
      */
     public void info(Marker marker, String format, Object arg) {
-        logger.info(String.format(format,arg));
+        logger.info(String.format(format, arg));
     }
 
     /**
@@ -452,7 +451,7 @@ public class StaticLogger implements Logger {
      * @param arg2   the second argument
      */
     public void info(Marker marker, String format, Object arg1, Object arg2) {
-        logger.info(String.format(format,arg1,arg2));
+        logger.info(String.format(format, arg1, arg2));
     }
 
     /**
@@ -465,7 +464,7 @@ public class StaticLogger implements Logger {
      * @param arguments a list of 3 or more arguments
      */
     public void info(Marker marker, String format, Object... arguments) {
-        logger.info(String.format(format,arguments));
+        logger.info(String.format(format, arguments));
     }
 
     /**
@@ -477,7 +476,7 @@ public class StaticLogger implements Logger {
      * @param t      the exception (throwable) to log
      */
     public void info(Marker marker, String msg, Throwable t) {
-        logger.info(msg,t);
+        logger.info(msg, t);
     }
 
     /**
@@ -510,7 +509,7 @@ public class StaticLogger implements Logger {
      * @param arg    the argument
      */
     public void warn(String format, Object arg) {
-        logger.warn(String.format(format,arg));
+        logger.warn(String.format(format, arg));
     }
 
     /**
@@ -528,7 +527,7 @@ public class StaticLogger implements Logger {
      * @param arguments a list of 3 or more arguments
      */
     public void warn(String format, Object... arguments) {
-        logger.warn(String.format(format,arguments));
+        logger.warn(String.format(format, arguments));
     }
 
     /**
@@ -543,7 +542,7 @@ public class StaticLogger implements Logger {
      * @param arg2   the second argument
      */
     public void warn(String format, Object arg1, Object arg2) {
-        logger.warn(String.format(format,arg1,arg2));
+        logger.warn(String.format(format, arg1, arg2));
     }
 
     /**
@@ -588,7 +587,7 @@ public class StaticLogger implements Logger {
      * @param arg    the argument
      */
     public void warn(Marker marker, String format, Object arg) {
-        logger.warn(String.format(format,arg));
+        logger.warn(String.format(format, arg));
     }
 
     /**
@@ -602,7 +601,7 @@ public class StaticLogger implements Logger {
      * @param arg2   the second argument
      */
     public void warn(Marker marker, String format, Object arg1, Object arg2) {
-        logger.warn(String.format(format,arg1,arg2));
+        logger.warn(String.format(format, arg1, arg2));
     }
 
     /**
@@ -615,7 +614,7 @@ public class StaticLogger implements Logger {
      * @param arguments a list of 3 or more arguments
      */
     public void warn(Marker marker, String format, Object... arguments) {
-        logger.warn(String.format(format,arguments));
+        logger.warn(String.format(format, arguments));
     }
 
     /**
@@ -627,7 +626,7 @@ public class StaticLogger implements Logger {
      * @param t      the exception (throwable) to log
      */
     public void warn(Marker marker, String msg, Throwable t) {
-        logger.warn(msg,t);
+        logger.warn(msg, t);
     }
 
     /**
@@ -660,7 +659,7 @@ public class StaticLogger implements Logger {
      * @param arg    the argument
      */
     public void error(String format, Object arg) {
-        logger.error(String.format(format,arg));
+        logger.error(String.format(format, arg));
     }
 
     /**
@@ -675,7 +674,7 @@ public class StaticLogger implements Logger {
      * @param arg2   the second argument
      */
     public void error(String format, Object arg1, Object arg2) {
-        logger.error(String.format(format,arg1,arg2));
+        logger.error(String.format(format, arg1, arg2));
     }
 
     /**
@@ -693,7 +692,7 @@ public class StaticLogger implements Logger {
      * @param arguments a list of 3 or more arguments
      */
     public void error(String format, Object... arguments) {
-        logger.error(String.format(format,arguments));
+        logger.error(String.format(format, arguments));
     }
 
     /**
@@ -704,7 +703,7 @@ public class StaticLogger implements Logger {
      * @param t   the exception (throwable) to log
      */
     public void error(String msg, Throwable t) {
-        logger.error(msg,t);
+        logger.error(msg, t);
     }
 
     /**
@@ -738,7 +737,7 @@ public class StaticLogger implements Logger {
      * @param arg    the argument
      */
     public void error(Marker marker, String format, Object arg) {
-        logger.error(String.format(format,arg));
+        logger.error(String.format(format, arg));
     }
 
     /**
@@ -752,7 +751,7 @@ public class StaticLogger implements Logger {
      * @param arg2   the second argument
      */
     public void error(Marker marker, String format, Object arg1, Object arg2) {
-        logger.error(String.format(format,arg1,arg2));
+        logger.error(String.format(format, arg1, arg2));
     }
 
     /**
@@ -765,7 +764,7 @@ public class StaticLogger implements Logger {
      * @param arguments a list of 3 or more arguments
      */
     public void error(Marker marker, String format, Object... arguments) {
-        logger.error(String.format(format,arguments));
+        logger.error(String.format(format, arguments));
     }
 
     /**
