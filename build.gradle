@@ -37,3 +37,31 @@ dependencies {
     provided 'io.github.jupf.staticlog:staticlog:2.2.0'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
+rootProject.ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'StaticLog-SLF4J-Binding'
+
+    libraryVersion = version
+
+    publishedGroupId = 'io.github.jupf.staticlog'
+    libraryName = 'StaticLog-SLF4J-Binding'
+    artifact = 'staticlog-slf4j-binding'
+
+    libraryDescription = 'SLF4J Binding for the StaticLog library'
+
+    siteUrl = 'https://github.com/jupf/staticlog-slf4j-binding'
+    gitUrl = 'https://github.com/jupf/staticlog-slf4j-binding.git'
+
+    developerId = 'jupf'
+    developerName = 'Julian Pfeifer'
+    developerEmail = 'julian.pfeifer.88@gmail.com'
+
+    licenseName = 'The MIT License (MIT)'
+    licenseUrl = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
+}
+
+apply from: 'tasks.gradle'
+apply from: 'publish.gradle'
+apply from: 'bintray.gradle'

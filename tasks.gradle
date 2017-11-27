@@ -1,0 +1,16 @@
+jar {
+    baseName = 'staticlog-slf4j-binding'
+}
+
+//create a jar with sources
+task sourcesJar(type: Jar) {
+    baseName = 'staticlog-slf4j-binding'
+    classifier = 'sources'
+    from { sourceSets.main.java }
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    baseName = 'staticlog-slf4j-binding'
+    classifier = 'javadoc'
+    javadoc.destinationDir
+}

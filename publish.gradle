@@ -1,0 +1,48 @@
+artifacts {
+    archives jar
+    archives sourcesJar
+    archives javadocJar
+}
+
+def createPom = {
+    url siteUrl
+    licenses {
+        license {
+            name licenseName
+            url licenseUrl
+        }
+    }
+    developers {
+        developer {
+            id developerId
+            name developerName
+            email developerEmail
+        }
+    }
+    scm {
+        connection gitUrl
+        developerConnection gitUrl
+        url siteUrl
+
+    }
+}
+
+publishing {
+    publications {
+        staticlogslf4jbinding(MavenPublication) {
+            groupId = rootProject.group
+            artifactId 'staticlog-slf4j-binding'
+            version = rootProject.version
+            pom.withXml {
+                asNode().appendNode('name', libraryName)
+                asNode().appendNode('description', libraryDescription)
+                asNode().children().last() + createPom
+            }
+
+            artifact jar
+            artifact sourcesJar
+            artifact javadocJar
+
+        }
+    }
+}
